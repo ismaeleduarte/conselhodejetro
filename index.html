@@ -56,7 +56,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M50 0L100 50L50 100L0 50Z" fill="rgba(255,255,255,0.03)"/></svg>');
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M50 0L100 50L50 100L0 50Z" fill="rgba(255,255,[...]
             background-size: 50px 50px;
             z-index: 2;
         }
@@ -203,6 +203,10 @@
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 4px 6px rgba(99, 102, 241, 0.2);
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
         }
 
         .chat-button:hover {
@@ -280,18 +284,22 @@
         <h2 class="section-title">Os Quatro Pilares da Sabedoria de Jetro</h2>
         <div class="pilares-grid">
             <div class="pilar-card">
+                <i class="fas fa-users fa-3x" style="color: var(--primary-color);"></i>
                 <h3>Seleção de Líderes</h3>
                 <p>Homens capazes, tementes a Deus, que amem a verdade e aborreçam a avareza</p>
             </div>
             <div class="pilar-card">
+                <i class="fas fa-sitemap fa-3x" style="color: var(--primary-color);"></i>
                 <h3>Estrutura Hierárquica</h3>
                 <p>Organização eficiente em níveis de responsabilidade e autoridade</p>
             </div>
             <div class="pilar-card">
+                <i class="fas fa-tasks fa-3x" style="color: var(--primary-color);"></i>
                 <h3>Delegação Eficaz</h3>
                 <p>Distribuição inteligente de responsabilidades e empoderamento de líderes</p>
             </div>
             <div class="pilar-card">
+                <i class="fas fa-balance-scale fa-3x" style="color: var(--primary-color);"></i>
                 <h3>Gestão Sustentável</h3>
                 <p>Equilíbrio entre responsabilidades e capacidade de gestão</p>
             </div>
