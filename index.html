@@ -1,7 +1,9 @@
-<html><head><base href="https://www.conselhodejetro.com/">
+<html>
+<head>
+    <base href="https://www.conselhodejetro.com/">
     <meta charset="UTF-8">
-    <meta name="description" content="Conselho de Jetro: Sabedoria milenar aplicada à liderança moderna, oferecendo consultoria executiva e mentoria estratégica baseada em princípios bíblicos.">
-    <meta name="keywords" content="consultoria executiva, coaching executivo, mentoria empresarial, conselho administrativo, desenvolvimento de líderes, gestão moderna, liderança estratégica, board advisor, coach, coaching, c-level, conselho, ibgc, gonew, fdc, consultoria de negócios, mentoria de gestão">
+    <meta name="description" content="Conselho de Jetro: insights estratégicos e sabedoria prática para líderes C-level, empreendedores e conselheiros. Abordamos liderança, mentoria, coaching e gestão ética com base em princípios cristãos e valores sólidos.">
+    <meta name="keywords" content="liderança, conselho, C-level, IBGC, FDC, coach, coaching, GoNew, mentor, mentoria, advisor, gestão estratégica, empreendedorismo ético, princípios cristãos, tomada de decisão, liderança cristã">
     <meta name="author" content="Conselho de Jetro">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,8 +66,8 @@
             right: 0;
             bottom: 0;
             background: linear-gradient(135deg, 
-                rgba(44, 62, 80, 0.95), 
-                rgba(142, 68, 173, 0.85));
+                rgba(44, 62, 80, 0.7), 
+                rgba(142, 68, 173, 0.6));
             z-index: 1;
         }
 
@@ -159,7 +161,106 @@
         }
 
         .jetro-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
             margin-top: 3rem;
+        }
+
+        .jetro-image {
+            flex: 0 0 300px;
+            position: relative;
+        }
+
+        .jetro-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: 3px solid var(--secondary-color);
+        }
+
+        .jetro-image img:hover {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .jetro-text {
+            flex: 1;
+            font-style: italic;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: var(--text-color);
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            .header {
+                height: 50vh;
+            }
+            .header-quote {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+                padding: 0 1rem;
+            }
+            .pilares-grid {
+                grid-template-columns: 1fr;
+                padding: 0 1rem;
+            }
+            .pilar-card {
+                padding: 1.5rem;
+            }
+            .jetro-section,
+            .pilares-section,
+            .chat-section,
+            .aplicacoes-section {
+                padding: 3rem 1rem;
+            }
+            .jetro-text {
+                font-size: 1rem;
+                text-align: left;
+            }
+            footer {
+                padding: 2rem 1rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .floating-chat-button {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+                top: 10px;
+                right: 10px;
+            }
+            .chat-frame {
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 1.8rem;
+            }
+            .subtitle {
+                font-size: 1rem;
+            }
+            .pilar-icon {
+                font-size: 2rem;
+            }
+            .social-links a {
+                font-size: 1.2rem;
+                margin: 0 0.5rem;
+            }
         }
 
         .jetro-story {
@@ -370,54 +471,21 @@
             background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
-
-        @media (max-width: 768px) {
-            .main-title {
-                font-size: 2.5rem;
-            }
-            .subtitle {
-                font-size: 1.4rem;
-            }
-            .header {
-                height: 60vh;
-            }
-            .jetro-story {
-                grid-template-columns: 1fr;
-            }
-            .pilares-grid {
-                grid-template-columns: 1fr; /* Single column on mobile */
-            }
-            .floating-chat-button {
-                padding: 0.6rem 1.2rem;
-                font-size: 0.9rem;
-                top: 15px;
-                right: 15px;
-            }
-            .chat-frame {
-                width: 100% !important; /* Override inline styles */
-                max-width: 350px; /* Set maximum width for mobile */
-            }
-            .chat-section-button {
-                padding: 0.8rem 1.5rem;
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .floating-chat-button {
-                padding: 0.5rem 1rem;
-                font-size: 0.8rem;
-                top: 10px;
-                right: 10px;
-            }
-            .chat-frame {
-                max-width: 300px;
-            }
-        }
     </style>
+
+    <!-- Add structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Conselho de Jetro",
+      "description": "Consultoria executiva e mentoria estratégica baseada na sabedoria milenar de Jetro",
+      "url": "https://www.conselhodejetro.com"
+    }
+    </script>
 </head>
 <body>
-    <button class="floating-chat-button" onclick="toggleChat()">
+    <button class="floating-chat-button" onclick="openChat()">
         <i class="fas fa-comments"></i> Quero um Conselho
     </button>
     
@@ -438,27 +506,17 @@
         <div class="jetro-container">
             <h2 class="section-title">Quem Foi Jetro?</h2>
             <div class="jetro-content">
-                <div class="jetro-story">
-                    <div class="story-item fade-in">
-                        <i class="fas fa-crown story-icon"></i>
-                        <h3>Sacerdote e Líder</h3>
-                        <p>Jetro foi sacerdote e líder de Midiã, conhecido por sua extraordinária sabedoria e discernimento.</p>
-                    </div>
-                    <div class="story-item fade-in">
-                        <i class="fas fa-handshake story-icon"></i>
-                        <h3>Mentor de Moisés</h3>
-                        <p>Como sogro de Moisés, tornou-se seu principal conselheiro e mentor durante a jornada de libertação do povo hebreu.</p>
-                    </div>
-                    <div class="story-item fade-in">
-                        <i class="fas fa-lightbulb story-icon"></i>
-                        <h3>Conselheiro Estratégico</h3>
-                        <p>Revolucionou o sistema de gestão e liderança de Moisés, implementando uma estrutura organizacional que perdura até hoje.</p>
-                    </div>
-                    <div class="story-item fade-in">
-                        <i class="fas fa-book-reader story-icon"></i>
-                        <h3>Legado Eterno</h3>
-                        <p>Seus princípios de liderança e gestão, registrados em Êxodo 18, continuam relevantes e aplicáveis no mundo moderno.</p>
-                    </div>
+                <div class="jetro-image">
+                    <img src="/Jetro_Avatar.png" alt="Retrato de Jetro, o s&#xe1;bio conselheiro">
+                </div>
+                <div class="jetro-text">
+                    <p>&quot;Eu sou Jetro, sacerdote de M&#xed;dia e pai de Z&#xed;pora, que se tornou esposa de Mois&#xe9;s. Minha hist&#xf3;ria &#xe9; um testamento &#xe0; import&#xe2;ncia da sabedoria e do discernimento na lideran&#xe7;a.</p>
+                    
+                    <p>Como l&#xed;der e sacerdote em M&#xed;dia, vi o potencial em Mois&#xe9;s quando ele fugiu do Egito. Acolhi-o, dei-lhe minha filha em casamento e, mais tarde, quando ele enfrentava o desafio de liderar milhares de pessoas, ofereci-lhe um conselho que transformaria para sempre a arte da lideran&#xe7;a.</p>
+                    
+                    <p>Percebi que Mois&#xe9;s estava sobrecarregado, tentando julgar todas as quest&#xf5;es do povo sozinho. Foi ent&#xe3;o que compartilhei com ele um sistema de delega&#xe7;&#xe3;o e gest&#xe3;o que se tornaria um modelo atemporal de lideran&#xe7;a eficaz.</p>
+                    
+                    <p>Minha contribui&#xe7;&#xe3;o n&#xe3;o foi apenas um sistema administrativo, mas uma filosofia de lideran&#xe7;a baseada em valores fundamentais: capacidade, temor a Deus, integridade e desprendimento. Estes princ&#xed;pios continuam t&#xe3;o relevantes hoje quanto eram h&#xe1; milhares de anos.&quot;</p>
                 </div>
             </div>
         </div>
@@ -493,7 +551,7 @@
     <section class="chat-section">
         <div class="chat-container">
             <h2 class="section-title">Sabedoria para Seu Desafio</h2>
-            <button class="chat-section-button" onclick="toggleChat()">
+            <button class="chat-section-button" onclick="openChat()">
                 <i class="fas fa-comments"></i> Quero um Conselho
             </button>
             <iframe id="widget-iframe" src="https://platform.intelecto.center/embed/chat/34009" style="border: none; width: 100%; max-width: 400px; height: 600px; border-radius: 20px; border: 1px #eee solid;" class="chat-frame">
@@ -547,47 +605,35 @@
         <p>&#xa9; 2024 Conselho de Jetro - Todos os direitos reservados</p>
     </footer>
 
-    <script>
-        function toggleChat() {
-            const chatFrame = document.querySelector('.chat-frame');
-            const floatingButton = document.querySelector('.floating-chat-button');
-            const sectionButton = document.querySelector('.chat-section-button');
-            const chatSection = document.querySelector('.chat-section');
-            if (chatFrame.style.display === 'none' || !chatFrame.style.display) {
-                chatFrame.style.display = 'block';
-                floatingButton.innerHTML = '<i class="fas fa-times"></i> Fechar Conselho';
-                sectionButton.innerHTML = '<i class="fas fa-times"></i> Fechar Conselho';
-                floatingButton.style.background = 'linear-gradient(45deg, var(--secondary-color), #FF8585)';
-                sectionButton.style.background = 'linear-gradient(45deg, var(--secondary-color), #FF8585)';
-                chatSection.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            } else {
-                chatFrame.style.display = 'none';
-                floatingButton.innerHTML = '<i class="fas fa-comments"></i> Quero um Conselho';
-                sectionButton.innerHTML = '<i class="fas fa-comments"></i> Quero um Conselho';
-                floatingButton.style.background = 'linear-gradient(45deg, var(--accent-color), var(--primary-color))';
-                sectionButton.style.background = 'linear-gradient(45deg, var(--accent-color), var(--primary-color))';
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.animation = 'fadeIn 0.8s ease-out forwards';
-                        entry.target.style.animationDelay = entry.target.dataset.delay;
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-
-            document.querySelectorAll('.story-item').forEach((item, index) => {
-                item.dataset.delay = `${index * 0.2}s`;
-                observer.observe(item);
-            });
-        });
-    </script>
+    <script>function openChat() {
+  const chatFrame = document.querySelector('.chat-frame');
+  chatFrame.style.display = 'block';
+  document.querySelector('.floating-chat-button').style.display = 'none';
+  document.querySelector('.chat-section-button').style.display = 'none';
+  document.querySelector('.chat-section').scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+function checkMobileViewport() {
+  return window.innerWidth <= 768;
+}
+document.addEventListener('touchstart', function () {}, true);
+document.addEventListener('DOMContentLoaded', function () {
+  const observerOptions = {
+    threshold: checkMobileViewport() ? 0.1 : 0.2
+  };
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = checkMobileViewport() ? 'fadeIn 0.5s ease-out forwards' : 'fadeIn 0.8s ease-out forwards';
+        entry.target.style.animationDelay = entry.target.dataset.delay;
+      }
+    });
+  }, observerOptions);
+  document.querySelectorAll('.story-item').forEach((item, index) => {
+    item.dataset.delay = `${index * 0.2}s`;
+    observer.observe(item);
+  });
+});</script>
 </body>
 </html>
