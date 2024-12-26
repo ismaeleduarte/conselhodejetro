@@ -28,11 +28,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&amp;family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
     <style>
+/* Minimize o CSS em produção para desempenho */
         :root {
             --primary-color: #2C3E50;    /* Deeper blue-grey from the robes */
             --secondary-color: #8E44AD;   /* Rich purple for spiritual wisdom */
             --background-color: #F5F6F8;  /* Light grey background */
-            --text-color: #2D3748;       /* Dark grey text */
+            --text-color: #1A202C;       /* Dark grey text */
             --accent-color: #34495E;     /* Complementary blue-grey */
             --success-color: #27AE60;    /* Nature-inspired green */
             --warning-color: #D35400;    /* Earth tone orange */
@@ -237,6 +238,8 @@
 
         @media (max-width: 360px) {
             .floating-chat-button {
+    min-width: 48px;
+    min-height: 48px;
                 padding: 0.5rem 1rem;
                 font-size: 0.8rem;
                 top: 10px;
@@ -248,6 +251,7 @@
         }
 
         @media (max-width: 480px) {
+    body { font-size: 16px; line-height: 1.5; }
             .main-title {
                 font-size: 1.8rem;
             }
@@ -416,6 +420,8 @@
         }
 
         .floating-chat-button {
+    min-width: 48px;
+    min-height: 48px;
             position: fixed;
             top: 20px;
             right: 20px;
@@ -490,7 +496,7 @@
     </button>
     
     <header class="header">
-        <img src="/Jetro_Avatar.png" alt="S&#xe1;bio Jetro" class="header-image">
+        <img loading="lazy" src="/Jetro_Avatar.png" alt="S&#xe1;bio Jetro" class="header-image">
         <div class="header-overlay"></div>
         <div class="header-content">
             <h1 class="main-title">O Conselho de Jetro</h1>
@@ -507,7 +513,7 @@
             <h2 class="section-title">Quem Foi Jetro?</h2>
             <div class="jetro-content">
                 <div class="jetro-image">
-                    <img src="/Jetro_Avatar.png" alt="Retrato de Jetro, o s&#xe1;bio conselheiro">
+                    <img loading="lazy" src="/Jetro_Avatar.png" alt="Retrato de Jetro, o s&#xe1;bio conselheiro">
                 </div>
                 <div class="jetro-text">
                     <p>&quot;Eu sou Jetro, sacerdote de M&#xed;dia e pai de Z&#xed;pora, que se tornou esposa de Mois&#xe9;s. Minha hist&#xf3;ria &#xe9; um testamento &#xe0; import&#xe2;ncia da sabedoria e do discernimento na lideran&#xe7;a.</p>
@@ -554,7 +560,7 @@
             <button class="chat-section-button" onclick="openChat()">
                 <i class="fas fa-comments"></i> Quero um Conselho
             </button>
-            <iframe id="widget-iframe" src="https://platform.intelecto.center/embed/chat/34009" style="border: none; width: 100%; max-width: 400px; height: 600px; border-radius: 20px; border: 1px #eee solid;" class="chat-frame">
+            <iframe loading="lazy" id="widget-iframe" src="https://platform.intelecto.center/embed/chat/34009" style="border: none; width: 100%; max-width: 400px; height: 600px; border-radius: 20px; border: 1px #eee solid;" class="chat-frame">
             </iframe>
         </div>
     </section>
