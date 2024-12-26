@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O Conselho de Jetro: Sabedoria Antiga para Gestão Moderna</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #4A90E2;
@@ -43,8 +44,21 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(74, 144, 226, 0.9), rgba(99, 102, 241, 0.9));
+            background: linear-gradient(135deg, 
+                rgba(74, 144, 226, 0.95), 
+                rgba(99, 102, 241, 0.9));
             z-index: 1;
+        }
+
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M50 0L100 50L50 100L0 50Z" fill="rgba(255,255,255,0.03)"/></svg>');
+            background-size: 50px 50px;
+            z-index: 2;
         }
 
         .header-image {
@@ -55,18 +69,27 @@
             height: 100%;
             object-fit: cover;
             z-index: 0;
+            filter: grayscale(20%);
         }
 
         .header-content {
             position: relative;
-            z-index: 2;
-            max-width: 800px;
+            z-index: 3;
+            max-width: 1000px;
             padding: 2rem;
         }
 
+        .header-symbol {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
         .main-title {
-            font-size: 4rem;
+            font-size: 4.5rem;
             margin-bottom: 1rem;
+            font-family: 'Cinzel', serif;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
             background: linear-gradient(45deg, #FFFFFF, #E2E8F0);
             -webkit-background-clip: text;
@@ -76,7 +99,40 @@
         .subtitle {
             font-size: 1.8rem;
             margin-bottom: 2rem;
+            font-family: 'Cormorant Garamond', serif;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+        }
+
+        .header-quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 2rem auto;
+            opacity: 0.9;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            z-index: 3;
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
         }
 
         .pilares-section {
@@ -204,9 +260,19 @@
 <body>
     <header class="header">
         <img src="/imagem-sabio.jpg" alt="Sábio Conselheiro" class="header-image">
+        <div class="header-overlay"></div>
         <div class="header-content">
+            <svg class="header-symbol" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="white" stroke-width="2"/>
+                <path d="M50 5 L50 95 M5 50 L95 50" stroke="white" stroke-width="2" opacity="0.6"/>
+                <circle cx="50" cy="50" r="10" fill="white" opacity="0.9"/>
+            </svg>
             <h1 class="main-title">O Conselho de Jetro</h1>
-            <h2 class="subtitle">Sabedoria Antiga para Gestão Moderna</h2>
+            <h2 class="subtitle">Sabedoria Milenar para a Liderança Moderna</h2>
+            <p class="header-quote">"Escolha homens capazes, tementes a Deus, que amem a verdade e aborreçam a avareza" - Êxodo 18:21</p>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down" style="color: white; font-size: 2rem;"></i>
         </div>
     </header>
 
