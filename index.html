@@ -172,8 +172,12 @@
         }
 
         .jetro-image {
-            flex: 0 0 250px; /* Smaller image on mobile */
+            flex: 0 0 200px; /* Reduced from 250px */
             position: relative;
+            margin: 0 auto; /* Center the image */
+            max-width: 200px; /* Add max-width to ensure image doesn't exceed this size */
+            cursor: pointer; /* Add cursor pointer */
+            animation: pulse 1.5s infinite; /* Add pulse animation */
         }
 
         .jetro-image img {
@@ -182,6 +186,7 @@
             border-radius: 50%;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             border: 3px solid var(--secondary-color);
+            object-fit: cover; /* Ensure proper image scaling */
         }
 
         .jetro-image img:hover {
@@ -190,7 +195,20 @@
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
         .jetro-text {
+            display: none; /* Hide text initially */
             flex: 1;
             font-style: italic;
             line-height: 1.8;
@@ -200,14 +218,15 @@
         }
 
         @media (max-width: 768px) {
+            .jetro-image {
+                flex: 0 0 180px; /* Even smaller on mobile */
+                max-width: 180px;
+            }
+
             .jetro-content {
                 flex-direction: column;
                 text-align: center;
                 gap: 2rem;
-            }
-
-            .jetro-image {
-                flex: 0 0 250px; /* Smaller image on mobile */
             }
 
             .header {
@@ -253,7 +272,8 @@
             }
 
             .jetro-image {
-                flex: 0 0 200px;
+                flex: 0 0 150px; /* Smallest size for mobile */
+                max-width: 150px;
             }
 
             .jetro-text {
@@ -490,6 +510,30 @@
             background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
+
+        .wisdom-logo {
+            width: 60px;
+            height: 60px;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+        }
+
+        .wisdom-logo:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .wisdom-logo {
+                width: 40px;
+                height: 40px;
+                top: 10px;
+                left: 10px;
+            }
+        }
     </style>
 
     <!-- Add structured data -->
@@ -504,6 +548,34 @@
     </script>
 </head>
 <body>
+    <div class="wisdom-logo">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Scroll Background -->
+            <path d="M20,10 Q50,-5 80,10 L80,80 Q50,95 20,80 Z" 
+                  fill="#F5F6F8" 
+                  stroke="#8E44AD" 
+                  stroke-width="2"/>
+            
+            <!-- Decorative Swirls -->
+            <path d="M30,20 Q50,15 70,20 M30,30 Q50,25 70,30 M30,40 Q50,35 70,40"
+                  fill="none"
+                  stroke="#2C3E50"
+                  stroke-width="1.5"/>
+            
+            <!-- Flame of Knowledge -->
+            <path d="M45,50 Q50,40 55,50 Q60,60 50,70 Q40,60 45,50"
+                  fill="#8E44AD"/>
+            
+            <!-- Book Base -->
+            <path d="M35,70 L65,70 Q60,80 50,82 Q40,80 35,70"
+                  fill="#2C3E50"/>
+            
+            <!-- Hebrew Letter י (Yod) - symbolizing wisdom -->
+            <path d="M48,55 L52,55 L50,65 Z"
+                  fill="#F5F6F8"/>
+        </svg>
+    </div>
+    
     <button class="floating-chat-button" onclick="openChat()">
         <i class="fas fa-comments"></i> Quero um Conselho
     </button>
@@ -525,17 +597,15 @@
         <div class="jetro-container">
             <h2 class="section-title">Quem Foi Jetro?</h2>
             <div class="jetro-content">
-                <div class="jetro-image">
+                <div class="jetro-image" onclick="toggleJetroText()">
                     <img loading="lazy" src="/Jetro_Avatar.png" alt="Retrato de Jetro, o s&#xe1;bio conselheiro">
                 </div>
                 <div class="jetro-text">
-                    <p>&quot;Eu sou Jetro, sacerdote de M&#xed;dia e pai de Z&#xed;pora, que se tornou esposa de Mois&#xe9;s. Minha hist&#xf3;ria &#xe9; um testamento &#xe0; import&#xe2;ncia da sabedoria e do discernimento na lideran&#xe7;a.</p>
+                    <p>"Eu sou Jetro, sacerdote de Mídia e sogro de Moisés. Minha história é um testamento à importância da sabedoria na liderança.</p>
                     
-                    <p>Como l&#xed;der e sacerdote em M&#xed;dia, vi o potencial em Mois&#xe9;s quando ele fugiu do Egito. Acolhi-o, dei-lhe minha filha em casamento e, mais tarde, quando ele enfrentava o desafio de liderar milhares de pessoas, ofereci-lhe um conselho que transformaria para sempre a arte da lideran&#xe7;a.</p>
+                    <p>Como líder e sacerdote, acolhi Moisés quando ele fugiu do Egito. Mais tarde, ao vê-lo sobrecarregado com a liderança de milhares, compartilhei com ele um sistema revolucionário de gestão e delegação que se tornaria um modelo atemporal de liderança eficaz.</p>
                     
-                    <p>Percebi que Mois&#xe9;s estava sobrecarregado, tentando julgar todas as quest&#xf5;es do povo sozinho. Foi ent&#xe3;o que compartilhei com ele um sistema de delega&#xe7;&#xe3;o e gest&#xe3;o que se tornaria um modelo atemporal de lideran&#xe7;a eficaz.</p>
-                    
-                    <p>Minha contribui&#xe7;&#xe3;o n&#xe3;o foi apenas um sistema administrativo, mas uma filosofia de lideran&#xe7;a baseada em valores fundamentais: capacidade, temor a Deus, integridade e desprendimento. Estes princ&#xed;pios continuam t&#xe3;o relevantes hoje quanto eram h&#xe1; milhares de anos.&quot;</p>
+                    <p>Minha contribuição vai além de um sistema administrativo - é uma filosofia de liderança fundamentada em valores essenciais: capacidade, temor a Deus, integridade e desprendimento. Princípios que permanecem tão relevantes hoje quanto eram há milhares de anos."</p>
                 </div>
             </div>
         </div>
@@ -655,6 +725,10 @@ document.addEventListener('DOMContentLoaded', function () {
     item.dataset.delay = `${index * 0.2}s`;
     observer.observe(item);
   });
-});</script>
+});
+function toggleJetroText() {
+    const jetroText = document.querySelector('.jetro-text');
+    jetroText.style.display = jetroText.style.display === 'none' ? 'block' : 'none';
+}</script>
 </body>
 </html>
