@@ -6,7 +6,7 @@
     <meta name="keywords" content="liderança, conselho, C-level, IBGC, FDC, coach, coaching, GoNew, mentor, mentoria, advisor, gestão estratégica, empreendedorismo ético, princípios cristãos, tomada de decisão, liderança cristã">
     <meta name="author" content="Conselho de Jetro">
     <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="language" content="pt-BR">
     <meta name="revisit-after" content="7 days">
     <meta name="theme-color" content="#4A90E2">
@@ -49,7 +49,7 @@
 
         .header {
             position: relative;
-            height: 60vh; /* Reduced from 80vh */
+            height: 70vh; /* Taller header on mobile */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -103,13 +103,14 @@
         }
 
         .main-title {
-            font-size: 3.5rem; /* Reduced from 4.5rem */
+            font-size: 2.5rem; /* Updated for mobile */
             margin-bottom: 1rem;
             font-family: 'Cinzel', serif;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
             background: linear-gradient(45deg, #FFFFFF, #E2E8F0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            padding: 0 1rem; /* Updated for mobile */
         }
 
         .subtitle {
@@ -122,11 +123,12 @@
 
         .header-quote {
             font-style: italic;
-            font-size: 1.2rem;
+            font-size: 1rem; /* Updated for mobile */
             max-width: 600px;
             margin: 2rem auto;
             opacity: 0.9;
             font-family: 'Cormorant Garamond', serif;
+            padding: 0 0.5rem; /* Updated for mobile */
         }
 
         .scroll-indicator {
@@ -163,13 +165,14 @@
 
         .jetro-content {
             display: flex;
-            gap: 3rem;
-            align-items: center;
+            flex-direction: column; /* Updated for mobile */
+            text-align: center; /* Updated for mobile */
+            gap: 2rem; /* Updated for mobile */
             margin-top: 3rem;
         }
 
         .jetro-image {
-            flex: 0 0 300px;
+            flex: 0 0 250px; /* Smaller image on mobile */
             position: relative;
         }
 
@@ -197,74 +200,84 @@
         }
 
         @media (max-width: 768px) {
-            .main-title {
-                font-size: 2rem;
+            .jetro-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
             }
-            .subtitle {
-                font-size: 1.2rem;
+
+            .jetro-image {
+                flex: 0 0 250px; /* Smaller image on mobile */
             }
+
             .header {
-                height: 50vh;
+                height: 70vh; /* Taller header on mobile */
             }
-            .header-quote {
-                font-size: 1rem;
+
+            .main-title {
+                font-size: 2.5rem;
                 padding: 0 1rem;
             }
-            .section-title {
-                font-size: 1.8rem;
-                padding: 0 1rem;
-            }
+
             .pilares-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr; /* Single column on mobile */
+                gap: 1.5rem;
                 padding: 0 1rem;
             }
-            .pilar-card {
+
+            .story-item {
                 padding: 1.5rem;
             }
-            .jetro-section,
-            .pilares-section,
-            .chat-section,
-            .aplicacoes-section {
-                padding: 3rem 1rem;
-            }
-            .jetro-text {
-                font-size: 1rem;
-                text-align: left;
-            }
-            footer {
-                padding: 2rem 1rem;
-            }
-        }
 
-        @media (max-width: 360px) {
-            .floating-chat-button {
-    min-width: 48px;
-    min-height: 48px;
-                padding: 0.5rem 1rem;
-                font-size: 0.8rem;
-                top: 10px;
-                right: 10px;
-            }
-            .chat-frame {
-                max-width: 300px;
+            .aplicacoes-section .pilares-grid {
+                grid-template-columns: 1fr;
             }
         }
 
         @media (max-width: 480px) {
-    body { font-size: 16px; line-height: 1.5; }
+            .header-content {
+                padding: 1rem;
+            }
+
             .main-title {
-                font-size: 1.8rem;
-            }
-            .subtitle {
-                font-size: 1rem;
-            }
-            .pilar-icon {
                 font-size: 2rem;
             }
-            .social-links a {
+
+            .subtitle {
                 font-size: 1.2rem;
-                margin: 0 0.5rem;
             }
+
+            .header-quote {
+                font-size: 1rem;
+                padding: 0 0.5rem;
+            }
+
+            .jetro-image {
+                flex: 0 0 200px;
+            }
+
+            .jetro-text {
+                font-size: 0.95rem;
+            }
+
+            .pilar-card {
+                padding: 1.25rem;
+            }
+
+            .chat-frame {
+                width: 100%;
+                max-width: 100%;
+                margin: 1rem 0;
+            }
+        }
+
+        /* Add touch-friendly tap targets */
+        .floating-chat-button,
+        .chat-section-button,
+        .social-links a {
+            min-width: 48px;
+            min-height: 48px;
+            padding: 12px;
         }
 
         .jetro-story {
@@ -420,8 +433,8 @@
         }
 
         .floating-chat-button {
-    min-width: 48px;
-    min-height: 48px;
+            min-width: 48px;
+            min-height: 48px;
             position: fixed;
             top: 20px;
             right: 20px;
@@ -621,7 +634,7 @@
   });
 }
 function checkMobileViewport() {
-  return window.innerWidth <= 768;
+    return window.innerWidth <= 768;
 }
 document.addEventListener('touchstart', function () {}, true);
 document.addEventListener('DOMContentLoaded', function () {
@@ -631,7 +644,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.style.animation = checkMobileViewport() ? 'fadeIn 0.5s ease-out forwards' : 'fadeIn 0.8s ease-out forwards';
+        entry.target.style.animation = checkMobileViewport() ? 
+            'fadeIn 0.5s ease-out forwards' : 
+            'fadeIn 0.8s ease-out forwards';
         entry.target.style.animationDelay = entry.target.dataset.delay;
       }
     });
