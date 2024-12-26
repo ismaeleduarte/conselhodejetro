@@ -1,7 +1,7 @@
 <html><head><base href="https://www.conselhodejetro.com/">
     <meta charset="UTF-8">
-    <meta name="description" content="O Conselho de Jetro oferece sabedoria milenar para lideran&#xe7;a moderna, consultoria executiva e mentoria estrat&#xe9;gica baseada nos princ&#xed;pios b&#xed;blicos de Jetro a Mois&#xe9;s">
-    <meta name="keywords" content="consultoria executiva, coach, coaching executivo, mentoring, mentoria empresarial, conselho administrativo, conselheiro empresarial, board advisor, c-level consulting, aconselhamento empresarial, tutor executivo, lideran&#xe7;a, gest&#xe3;o, delega&#xe7;&#xe3;o, desenvolvimento de l&#xed;deres, alta performance, estrat&#xe9;gia empresarial, sabedoria antiga, princ&#xed;pios b&#xed;blicos, Jetro, gest&#xe3;o moderna">
+    <meta name="description" content="Conselho de Jetro: Sabedoria milenar aplicada à liderança moderna, oferecendo consultoria executiva e mentoria estratégica baseada em princípios bíblicos.">
+    <meta name="keywords" content="consultoria executiva, coaching executivo, mentoria empresarial, conselho administrativo, desenvolvimento de líderes, gestão moderna, liderança estratégica, board advisor, coach, coaching, c-level, conselho, ibgc, gonew, fdc, consultoria de negócios, mentoria de gestão">
     <meta name="author" content="Conselho de Jetro">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,13 +27,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&amp;family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #4A90E2;
-            --secondary-color: #FF6B6B;
-            --background-color: #F8FAFC;
-            --text-color: #2D3748;
-            --accent-color: #6366F1;
-            --success-color: #48BB78;
-            --warning-color: #F6AD55;
+            --primary-color: #2C3E50;    /* Deeper blue-grey from the robes */
+            --secondary-color: #8E44AD;   /* Rich purple for spiritual wisdom */
+            --background-color: #F5F6F8;  /* Light grey background */
+            --text-color: #2D3748;       /* Dark grey text */
+            --accent-color: #34495E;     /* Complementary blue-grey */
+            --success-color: #27AE60;    /* Nature-inspired green */
+            --warning-color: #D35400;    /* Earth tone orange */
         }
 
         body {
@@ -64,8 +64,8 @@
             right: 0;
             bottom: 0;
             background: linear-gradient(135deg, 
-                rgba(74, 144, 226, 0.95), 
-                rgba(99, 102, 241, 0.9));
+                rgba(44, 62, 80, 0.95), 
+                rgba(142, 68, 173, 0.85));
             z-index: 1;
         }
 
@@ -81,6 +81,7 @@
         }
 
         .header-image {
+            content: url('/Jetro_Avatar.png');
             position: absolute;
             top: 0;
             left: 0;
@@ -88,7 +89,7 @@
             height: 100%;
             object-fit: cover;
             z-index: 0;
-            filter: grayscale(20%);
+            filter: grayscale(20%) brightness(0.8);
         }
 
         .header-content {
@@ -147,6 +148,68 @@
             }
         }
 
+        .jetro-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--background-color), white);
+        }
+
+        .jetro-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .jetro-content {
+            margin-top: 3rem;
+        }
+
+        .jetro-story {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .story-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .story-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .story-item h3 {
+            color: var(--primary-color);
+            margin: 1rem 0;
+            font-family: 'Cinzel', serif;
+        }
+
+        .story-item p {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .pilares-section {
             padding: 6rem 2rem;
             background-color: white;
@@ -165,7 +228,7 @@
             display: block;
             width: 100px;
             height: 4px;
-            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
             margin: 1rem auto;
             border-radius: 2px;
         }
@@ -191,19 +254,19 @@
         .pilar-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-            border-color: var(--accent-color);
+            border-color: var(--secondary-color);
         }
 
         .pilar-icon {
             font-size: 2.5rem;
-            color: var(--primary-color);
+            color: var(--secondary-color);
             margin-bottom: 1rem;
             transition: all 0.3s ease;
         }
 
         .pilar-card:hover .pilar-icon {
             transform: scale(1.1);
-            color: var(--accent-color);
+            color: var(--primary-color);
         }
 
         .chat-section {
@@ -229,7 +292,7 @@
         }
 
         footer {
-            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
             color: white;
             text-align: center;
             padding: 3rem 2rem;
@@ -253,10 +316,10 @@
 
         .floating-chat-button {
             position: fixed;
-            top: 20px; /* Changed from bottom to top */
+            top: 20px;
             right: 20px;
             z-index: 1000;
-            background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
             color: white;
             padding: 0.8rem 1.5rem;
             border: none;
@@ -266,23 +329,29 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             animation: pulse 2s infinite;
-            white-space: nowrap; /* Prevent text wrapping */
+            white-space: nowrap;
         }
 
         @keyframes pulse {
             0% {
-                box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
+                box-shadow: 0 0 0 0 rgba(142, 68, 173, 0.4);
             }
             70% {
-                box-shadow: 0 0 0 10px rgba(99, 102, 241, 0);
+                box-shadow: 0 0 0 10px rgba(142, 68, 173, 0);
             }
             100% {
-                box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+                box-shadow: 0 0 0 0 rgba(142, 68, 173, 0);
             }
         }
 
+        .floating-chat-button:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
         .chat-section-button {
-            background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
             color: white;
             padding: 1rem 2rem;
             border: none;
@@ -293,10 +362,12 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             margin: 2rem auto;
             display: block;
+            animation: pulse 2s infinite;
         }
 
         .chat-section-button:hover {
             transform: translateY(-2px);
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
@@ -310,13 +381,16 @@
             .header {
                 height: 60vh;
             }
+            .jetro-story {
+                grid-template-columns: 1fr;
+            }
             .pilares-grid {
                 grid-template-columns: 1fr; /* Single column on mobile */
             }
             .floating-chat-button {
                 padding: 0.6rem 1.2rem;
                 font-size: 0.9rem;
-                top: 15px; /* Changed from bottom to top */
+                top: 15px;
                 right: 15px;
             }
             .chat-frame {
@@ -333,7 +407,7 @@
             .floating-chat-button {
                 padding: 0.5rem 1rem;
                 font-size: 0.8rem;
-                top: 10px; /* Changed from bottom to top */
+                top: 10px;
                 right: 10px;
             }
             .chat-frame {
@@ -348,7 +422,7 @@
     </button>
     
     <header class="header">
-        <img src="/imagem-sabio.jpg" alt="S&#xe1;bio Conselheiro" class="header-image">
+        <img src="/Jetro_Avatar.png" alt="S&#xe1;bio Jetro" class="header-image">
         <div class="header-overlay"></div>
         <div class="header-content">
             <h1 class="main-title">O Conselho de Jetro</h1>
@@ -359,6 +433,36 @@
             <i class="fas fa-chevron-down" style="color: white; font-size: 2rem;"></i>
         </div>
     </header>
+
+    <section class="jetro-section">
+        <div class="jetro-container">
+            <h2 class="section-title">Quem Foi Jetro?</h2>
+            <div class="jetro-content">
+                <div class="jetro-story">
+                    <div class="story-item fade-in">
+                        <i class="fas fa-crown story-icon"></i>
+                        <h3>Sacerdote e Líder</h3>
+                        <p>Jetro foi sacerdote e líder de Midiã, conhecido por sua extraordinária sabedoria e discernimento.</p>
+                    </div>
+                    <div class="story-item fade-in">
+                        <i class="fas fa-handshake story-icon"></i>
+                        <h3>Mentor de Moisés</h3>
+                        <p>Como sogro de Moisés, tornou-se seu principal conselheiro e mentor durante a jornada de libertação do povo hebreu.</p>
+                    </div>
+                    <div class="story-item fade-in">
+                        <i class="fas fa-lightbulb story-icon"></i>
+                        <h3>Conselheiro Estratégico</h3>
+                        <p>Revolucionou o sistema de gestão e liderança de Moisés, implementando uma estrutura organizacional que perdura até hoje.</p>
+                    </div>
+                    <div class="story-item fade-in">
+                        <i class="fas fa-book-reader story-icon"></i>
+                        <h3>Legado Eterno</h3>
+                        <p>Seus princípios de liderança e gestão, registrados em Êxodo 18, continuam relevantes e aplicáveis no mundo moderno.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="pilares-section">
         <h2 class="section-title">Os Quatro Pilares da Sabedoria de Jetro</h2>
@@ -432,6 +536,9 @@
             <a href="https://www.instagram.com/conselhodejetro" target="_blank">
                 <i class="fab fa-instagram"></i>
             </a>
+            <a href="https://blog.conselhodejetro.com" target="_blank">
+                <i class="fas fa-blog"></i>
+            </a>
             <a href="mailto:contato@conselhodejetro.com">
                 <i class="far fa-envelope"></i>
             </a>
@@ -440,27 +547,47 @@
         <p>&#xa9; 2024 Conselho de Jetro - Todos os direitos reservados</p>
     </footer>
 
-    <script>function toggleChat() {
-  const chatFrame = document.querySelector('.chat-frame');
-  const floatingButton = document.querySelector('.floating-chat-button');
-  const sectionButton = document.querySelector('.chat-section-button');
-  const chatSection = document.querySelector('.chat-section');
-  if (chatFrame.style.display === 'none' || !chatFrame.style.display) {
-    chatFrame.style.display = 'block';
-    floatingButton.innerHTML = '<i class="fas fa-times"></i> Fechar Conselho';
-    sectionButton.innerHTML = '<i class="fas fa-times"></i> Fechar Conselho';
-    floatingButton.style.background = 'linear-gradient(45deg, var(--secondary-color), #FF8585)';
-    sectionButton.style.background = 'linear-gradient(45deg, var(--secondary-color), #FF8585)';
-    chatSection.scrollIntoView({
-      behavior: 'smooth'
-    });
-  } else {
-    chatFrame.style.display = 'none';
-    floatingButton.innerHTML = '<i class="fas fa-comments"></i> Quero um Conselho';
-    sectionButton.innerHTML = '<i class="fas fa-comments"></i> Quero um Conselho';
-    floatingButton.style.background = 'linear-gradient(45deg, var(--accent-color), var(--primary-color))';
-    sectionButton.style.background = 'linear-gradient(45deg, var(--accent-color), var(--primary-color))';
-  }
-}</script>
+    <script>
+        function toggleChat() {
+            const chatFrame = document.querySelector('.chat-frame');
+            const floatingButton = document.querySelector('.floating-chat-button');
+            const sectionButton = document.querySelector('.chat-section-button');
+            const chatSection = document.querySelector('.chat-section');
+            if (chatFrame.style.display === 'none' || !chatFrame.style.display) {
+                chatFrame.style.display = 'block';
+                floatingButton.innerHTML = '<i class="fas fa-times"></i> Fechar Conselho';
+                sectionButton.innerHTML = '<i class="fas fa-times"></i> Fechar Conselho';
+                floatingButton.style.background = 'linear-gradient(45deg, var(--secondary-color), #FF8585)';
+                sectionButton.style.background = 'linear-gradient(45deg, var(--secondary-color), #FF8585)';
+                chatSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            } else {
+                chatFrame.style.display = 'none';
+                floatingButton.innerHTML = '<i class="fas fa-comments"></i> Quero um Conselho';
+                sectionButton.innerHTML = '<i class="fas fa-comments"></i> Quero um Conselho';
+                floatingButton.style.background = 'linear-gradient(45deg, var(--accent-color), var(--primary-color))';
+                sectionButton.style.background = 'linear-gradient(45deg, var(--accent-color), var(--primary-color))';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeIn 0.8s ease-out forwards';
+                        entry.target.style.animationDelay = entry.target.dataset.delay;
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.story-item').forEach((item, index) => {
+                item.dataset.delay = `${index * 0.2}s`;
+                observer.observe(item);
+            });
+        });
+    </script>
 </body>
 </html>
